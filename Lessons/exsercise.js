@@ -8,7 +8,6 @@
             width: '600px',
             height: '600px',            
             position: 'absolute',
-            display: 'none',
             'text-align': 'center'
         });
         tabWidth = $('div>div').width()/4 - 2 + 'px';
@@ -33,7 +32,7 @@
             action(this);
         });
         function action(item) {
-            $('div>div').css("display", 'none');
+            $('div>div').hide();
             $('li').css("background-color", 'lightgrey');
             $(item).css("background-color", 'darkgrey');
             $("#"+$(item).attr('class')).css("background-color", 'darkgrey');
