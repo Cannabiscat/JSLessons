@@ -5,22 +5,24 @@
 	<title>JSExsercise</title>
 	<script type="text/javascript" language="JavaScript" src="jq/jquery.js"></script>
 	<script type="text/javascript" language="JavaScript" src="exsercise.js"></script>
-
 </head>
 <body>
-<div>
-<div id="Tasks">
-	<div id="e1"></div>
-	<div id="e2"></div>
-	<div id="e3"></div>
-	<div id="e4"></div>
+<div id="tabs">
+	<ul>
+		<li class="1">Tab 1</li>
+		<li class="2">Tab 2</li>
+		<li class="3">Tab 3</li>
+		<li class="4">Tab 4</li>
+	</ul>
+	<div class="1" id="1">Text1</div>
+	<div class="2" id="2">Text2</div>
+	<div class="3" id="3">Text3</div>
+	<div class="4" id="4">Text4</div>
 </div>
-<div id="Result">
-	<div id="r1"></div>
-	<div id="r2"></div>
-	<div id="r3"></div>
-	<div id="r4"></div>
-</div>
-</div>
+<form id="create">
+	Заголовок:<br><input type="text" name="tabTitle">
+	<p>Содержимое:<br><textarea name="tabBody" rows="10" cols="60"></textarea></p>
+	<input type="submit">
+</form>
 </body>
 </html>
