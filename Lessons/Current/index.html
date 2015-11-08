@@ -3,8 +3,32 @@
 <head>
 	<meta charset="UTF-8">
 	<title></title>
+	<style>
+		form {
+			position: relative;
+			text-align: center;
+		}
+		.disable {
+			color: azure;
+		}
+	</style>
+	<script type="text/javascript" language="JavaScript" src="js/jquery.js"></script>
+	<script type="text/javascript" language="JavaScript" src="exercise.js"></script>
 </head>
 <body>
-
+<div>
+	<form action="">
+		<p>Логин:<br/><input type="text" id="username" name="username"/></p>
+		<p>Пароль:<br/><input type="password" name="passwd"/></p>
+		<p>Email:<br/><input type="email" name="email"/></p>
+		<p>Пол:<br/>
+			<input type="radio" name="gender" value="male"/>Мужчина
+			<input type="radio" name="gender" value="female"/>Женщина
+		</p>
+		<p>Номер кредитной карты:<br/><input type="text" name="credit_card" style="width: 350px; margin-top: 1px"/></p>
+		<p>Немного о себе:<br/><textarea rows="4" cols="40" name="bio"></textarea></p>
+		<p><input type="submit" class="submit disable" name="Отправить"></p>
+	</form>
+</div>
 </body>
 </html>
