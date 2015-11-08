@@ -15,7 +15,7 @@
                     email: $('input[name=email]').val(),
                     gender: $('input[name=gender]').val(),
                     credit_card: $('input[name=credit_card]').val(),
-                    bio: $('input[name=bio]').val()
+                    bio: $('textarea[name=bio]').val()
                 },
                 type: 'POST'
             });
