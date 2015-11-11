@@ -19,6 +19,7 @@
                             $(('#'+key).replace(" ",'')).css("background-color", 'pink');
                         }
                     } else if (json["result"] == true) {
+                        $('*').css("background-color", '');
                         $('#result').css({
                             'background-color': 'cyan',
                             'color': 'blue'
