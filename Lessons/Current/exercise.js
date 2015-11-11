@@ -7,7 +7,24 @@
             $.ajax({
                 url: 'php/validator.php',
                 success: function(data, textStatus) {
-                    console.log(data);
+                    var json = $.parseJSON(data);
+                    if (json["result"] == false) {
+                        $('*').css("background-color", '');
+                        $('#result').css({
+                            'background-color': 'pink',
+                            'color': 'blue'
+                        });
+                        $('#result').html(JSON.stringify(json["error"]).substring(1, JSON.stringify(json["error"]).length-1).replace(/,/g,"<br>"));
+                        for(var key in json['error']) {
+                            $(('#'+key).replace(" ",'')).css("background-color", 'pink');
+                        }
+                    } else if (json["result"] == true) {
+                        $('#result').css({
+                            'background-color': 'cyan',
+                            'color': 'blue'
+                        });
+                        $('#result').text("Валидация прошла успешно!!");
+                    }
                 },
                 data: {
                     username: $('input[name=username]').val(),

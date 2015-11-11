@@ -18,8 +18,11 @@ $validated = $validator->validate(
 	$_POST, $rules
 );
 if($validated === TRUE) {
-	die("true");
+	$result["result"] = true;
+	die(json_encode($result));
 } else {
-	die("false");
+	$result['error'] = $validator->get_errors_array();
+	$result["result"] = false;
+	die(json_encode($result));
 }
 ?>
